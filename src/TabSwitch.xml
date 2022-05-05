@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<widget id="clevr.tabswitch.TabSwitch" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
-        supportedPlatform="Web"
-        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+<widget id="clevr.tabswitch.TabSwitch" pluginWidget="true" needsEntityContext="true" offlineCapable="true" supportedPlatform="Web"
+    xmlns="http://www.mendix.com/widget/1.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
     <name>Tab Switch</name>
     <description/>
     <icon/>
     <properties>
         <propertyGroup caption="General">
+            <property key="tabClass" type="string" required="true">
+                <caption>Classname</caption>
+                <description>Class of the tab container.</description>
+            </property>
             <property key="tabIndexNumber" type="expression" required="true">
                 <caption>Tab Index</caption>
                 <description>The index of the tab you wish to open on load (the first tab is index 1).</description>

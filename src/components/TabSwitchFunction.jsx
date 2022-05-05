@@ -1,13 +1,11 @@
-import React, { createElement, useEffect } from "react";
+import { createElement, useEffect } from "react";
 
-export function TabSwitchFunction({ tabIndexNumber }) {
-    const nodeRef = React.createRef();
-
+export function TabSwitchFunction({ tabClass, tabIndexNumber }) {
     useEffect(() => {
         const IntervalId = setInterval(openTab, 100);
 
         function openTab() {
-            const tabContainer = nodeRef.current.parentNode.querySelector(".mx-tabcontainer");
+            const tabContainer = document.querySelector("." + tabClass);
             if (tabContainer) {
                 const tabToOpen = tabContainer.childNodes[0].childNodes[tabIndexNumber];
                 if (tabToOpen) {
@@ -16,11 +14,11 @@ export function TabSwitchFunction({ tabIndexNumber }) {
                 }
             }
         }
-
-        setTimeout(function(){ 
-            clearInterval(IntervalId); 
+        // eslint-disable-next-line
+        setTimeout(function () {
+            clearInterval(IntervalId);
         }, 4000);
-    }, []);
+    }, [tabClass, tabIndexNumber]);
 
-    return <div ref={nodeRef} />;
+    return null;
 }
