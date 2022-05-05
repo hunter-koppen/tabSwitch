@@ -1,24 +1,13 @@
 ## TabSwitch
-[My widget description]
+Open a specific tab on load of the widget based on a datasource.
 
 ## Features
-[feature highlights]
+- Open specific tab
 
 ## Usage
-[step by step instructions]
-
-## Demo project
-[link to sandbox]
+Add the tab switch widget to the page.
+Then add a class to the Tab and also add this class inside the classname property of the widget.
+Model some logic to set the Tab Index property of the component to decide which tab should be opened on load.
 
 ## Issues, suggestions and feature requests
-[link to GitHub issues]
-
-## Development and contribution
-
-1. Install NPM package dependencies by using: `npm install`. If you use NPM v7.x.x, which can be checked by executing `npm -v`, execute: `npm install --legacy-peer-deps`.
-1. Run `npm start` to watch for code changes. On every change:
-    - the widget will be bundled;
-    - the bundle will be included in a `dist` folder in the root directory of the project;
-    - the bundle will be included in the `deployment` and `widgets` folder of the Mendix test project.
-
-[specify contribution]
+https://github.com/hunterkoppenclevr/tabSwitch/issues
