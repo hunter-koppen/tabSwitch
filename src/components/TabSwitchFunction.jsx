@@ -4,15 +4,22 @@ export function TabSwitchFunction({ tabIndexNumber }) {
     const nodeRef = React.createRef();
 
     useEffect(() => {
-        const tabContainer = nodeRef.current.parentNode.querySelector(".mx-tabcontainer");
-        console.log(tabContainer);
-        const tabToOpen = tabContainer.childNodes[0].childNodes[tabIndexNumber];
-        console.log(tabToOpen);
-        if (tabToOpen) {
-            setTimeout(function () {
-                tabToOpen.click();
-            }, 1);
+        const IntervalId = setInterval(openTab, 100);
+
+        function openTab() {
+            const tabContainer = nodeRef.current.parentNode.querySelector(".mx-tabcontainer");
+            if (tabContainer) {
+                const tabToOpen = tabContainer.childNodes[0].childNodes[tabIndexNumber];
+                if (tabToOpen) {
+                    tabToOpen.click();
+                    clearInterval(IntervalId);
+                }
+            }
         }
+
+        setTimeout(function(){ 
+            clearInterval(IntervalId); 
+        }, 4000);
     }, []);
 
     return <div ref={nodeRef} />;
