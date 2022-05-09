@@ -1,5 +1,5 @@
 ## TabSwitch
-Open a specific tab on load of the widget based on a datasource.
+Open a specific tab on load of the widget based on a simple expression.
 
 ## Features
 - Open specific tab
